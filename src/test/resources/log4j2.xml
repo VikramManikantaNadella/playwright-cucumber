@@ -1,0 +1,14 @@
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%tid] %-5p %c{1}:%L - %m%n" />
+		</Console>
+		<!-- <CustomLogAppender name="CustomLogAppender" /> -->
+	</Appenders>
+	<Loggers>
+		<Root level="${sys:logLevel:-INFO}">
+			<AppenderRef ref="Console" />
+			<!-- <AppenderRef ref="CustomLogAppender" /> -->
+		</Root>
+	</Loggers>
+</Configuration>
